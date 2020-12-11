@@ -1,0 +1,155 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta charset="utf-8" />
+		<title>用户注册</title>
+		<link rel="stylesheet" type="text/css" href="css/headFoot.css">
+                               <link rel="stylesheet" type="text/css" href="css/login.css">
+	<script  src="js/jquery.js"></script>
+	<script src="js/register1.js"></script>
+		<script>
+		
+		
+		</script>
+		<style>
+			ul {
+			list-style-type:none;
+			margin:0;
+			padding:0;
+			
+			background-color: #333;
+			overflow: hidden;
+			}
+			
+			li a{
+			 display:block;
+			  color: white;
+			  padding: 20px 125px;
+			    text-decoration: none;
+			    
+			}
+			
+			li {
+    			float: left;
+				}
+			
+			
+			li a:hover {
+   				 background-color: #555;
+    			 color: white;
+    			 }
+    			 
+    		td {
+    		padding:10px 20px;
+    		}
+    	.container{
+    	width:500px;
+    	height:480px;
+    	background-color:gold;
+    	position:absolute;top:110px;right:370px;
+    	}
+    	
+    	
+		</style>
+	</head>
+
+	<body>
+	<nav>
+		<ul>
+			<li><a href="index.html">登陆页面</a></li>
+			<li><a href="#">注册页面</a></li>
+			<li><a href="#">关于我们</a></li>
+			<li><a href="#">联系</a></li>
+		</ul>
+	</nav>
+	<div class="container" >
+	<h1 style="position:absolute;left:190px;">Sign up</h1>
+	<form action="register.jsp" method="post">
+	<table border="0" style="margin: 7% 0 0 25%; position:absolute;left:-15px;top:50px;">
+					<tr>
+						<td>
+							用户名：
+						</td>
+						<td>
+							<input name="username" type="text" maxlength="10"
+								onblur="validate_username();" />
+							<span id="username_errorTips"></span>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							密&nbsp;&nbsp;码：
+						</td>
+						<td>
+							<input name="passw" type="password" maxlength="10" id="passw"   />
+						    <span id="pass_errorTips"></span>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							确认密码：
+						</td>
+						<td>
+							<input name="passw_confirm" type="password" maxlength="10"
+								id="passw_confirm" onblur="validate_confirmpass();" />
+							<span id="passw_errorTips"></span>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							邮&nbsp;&nbsp;箱：
+						</td>
+						<td>
+							<input name="email" type="text" maxlength="20" id="email"
+								onblur="isEmail();" />
+							<span id="email_errorTips"></span>
+						</td>
+					</tr>
+				
+					<tr>
+						<td>
+							联系电话：
+						</td>
+						<td>
+							<input name="phone" type="text" maxlength="20" id="phone" onblur="isPhone();" />
+						    <span id="phone_errorTips"></span>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							性&nbsp;&nbsp;别：
+						</td>
+						<td>
+							<input name="sex" type="radio" value="female" />
+							女
+							<input name="sex" type="radio" value="male" />
+							男
+						</td>
+					</tr>
+					<tr>
+						<td>
+							身&nbsp;份&nbsp;证：
+						</td>
+						<td>
+							<input name="iD_card" type="text" maxlength="20" id="sc_card_num"
+								onblur="scCard();" />
+							<span id="card_errorTips"></span>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div align="center">
+								<input name="" type="submit" value="注册" onclick="return checkreg()" />
+							</div>
+						</td>
+						<td>
+							<div align="center">
+								<input name="" type="reset" value="重填" />
+							</div>
+						</td>
+					</tr>
+				</table>
+				</form>
+		</div>
+	 </body>
+</html>
